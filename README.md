@@ -6,8 +6,6 @@
 
 **Transform supplier data into strategic risk intelligence with AI**
 
-[![Live Demo](#) | [Documentation](#features) | [Tech Stack](#-technology-stack)
-
 </div>
 
 ---
@@ -18,44 +16,21 @@
 
 ## 🎯 The Business Problem
 
-Global supply chains face unprecedented volatility from non-linear shocks including geopolitical conflicts, environmental disasters, labor strikes, and regulatory changes. Traditional analytics dashboards excel at showing *what happened*, but fall short in answering critical questions:
+Global supply chains face unprecedented volatility from geopolitical conflicts, environmental disasters, labor strikes, and regulatory changes. Traditional analytics dashboards excel at showing *what happened*, but fail to answer:
 
-- **What could happen?** Predictive risk modeling
-- **How should we respond?** Strategic mitigation planning
-- **Where are we most vulnerable?** Multi-dimensional risk assessment
+- **What could happen?** → Predictive risk modeling
+- **How should we respond?** → Strategic mitigation planning  
+- **Where are we most vulnerable?** → Multi-dimensional risk assessment
 
 Resilio bridges this gap by combining structured data analysis with AI-powered scenario planning.
 
-## ✨ Key Features
+## ✨ Core Capabilities
 
-### 🔍 Intelligent Inventory Diagnostics
-Automated risk scoring engine that evaluates suppliers across four critical dimensions:
-- **Geopolitical Risk**: Country stability, trade restrictions, sanctions exposure
-- **Operational Risk**: Lead time variability, supplier reliability, production capacity
-- **Financial Risk**: Vendor health, payment terms, spend concentration
-- **Environmental Risk**: Climate vulnerability, sustainability compliance, ESG factors
+**Intelligent Risk Diagnostics** - Automated scoring across Geopolitical, Operational, Financial, and Environmental factors with real-time radar visualizations and spend concentration maps.
 
-### 🧪 Scenario Optimization Lab
-Interactive "What-If" simulation engine that models the impact of:
-- Port closures and logistics disruptions
-- Trade policy changes and tariff implementations
-- Natural disasters and climate events
-- Supplier bankruptcies and capacity constraints
-- Currency fluctuations and commodity price shocks
+**Scenario Optimization Lab** - Interactive "What-If" engine simulating port closures, trade policy changes, supplier bankruptcies, and climate events on your specific supplier network.
 
-### 📊 Actionable Mitigation Playbooks
-AI-generated strategic recommendations tailored to your network vulnerabilities:
-- **Diversification Strategies**: Multi-sourcing recommendations with cost-benefit analysis
-- **Buffer Stocking**: Optimized safety stock calculations based on risk exposure
-- **Nearshoring Opportunities**: Regional supplier alternatives with trade-off analysis
-- **Contract Restructuring**: Terms optimization for high-risk suppliers
-
-### 📈 Dynamic Risk Visualization
-Real-time interactive dashboards featuring:
-- Multi-dimensional risk radar charts
-- Geographic spend concentration heatmaps
-- Supplier criticality matrices
-- Trend analysis and early warning indicators
+**AI-Generated Mitigation Playbooks** - Strategic recommendations including diversification strategies, optimized buffer stocking, nearshoring opportunities, and contract restructuring based on network vulnerabilities.
 
 ## 🛠️ Technology Stack
 
@@ -67,55 +42,6 @@ Real-time interactive dashboards featuring:
 | **AI Engine** | Google Gemini Flash | Structured reasoning and scenario analysis |
 | **Prompt Engineering** | JSON Schema Validation | Reliable, parseable AI outputs |
 
-## 🚀 Getting Started
-
-### Prerequisites
-```bash
-Node.js 18+ 
-npm or yarn
-Google Gemini API key
-```
-
-### Installation
-
-1. Clone the repository
-```bash
-git clone https://github.com/yourusername/resilio.git
-cd resilio
-```
-
-2. Install dependencies
-```bash
-npm install
-```
-
-3. Configure environment variables
-```bash
-cp .env.example .env
-# Add your Google Gemini API key to .env
-```
-
-4. Run the development server
-```bash
-npm run dev
-```
-
-5. Open [http://localhost:3000](http://localhost:3000) in your browser
-
-## 📁 Project Structure
-
-```
-resilio/
-├── src/
-│   ├── components/       # React components
-│   ├── services/         # API and AI integration
-│   ├── utils/           # Helper functions
-│   └── types/           # TypeScript definitions
-├── public/
-│   └── Demo.jpg         # Application screenshot
-└── README.md
-```
-
 ## 💡 Use Cases
 
 - **Procurement Teams**: Identify high-risk suppliers before contract renewals
@@ -123,30 +49,58 @@ resilio/
 - **Supply Chain Analysts**: Generate executive reports on network vulnerabilities
 - **Strategic Planning**: Evaluate nearshoring vs. offshoring trade-offs
 
-## 📊 Why This Project Matters for Data/Business Analysts
+## 🚀 Getting Started
 
-This portfolio demonstrates:
+### Prerequisites
+```bash
+Node.js 18+
+npm or yarn
+Google Gemini API key
+```
 
-1. **Analytical Problem-Solving**: Decomposing complex global risks into quantifiable, actionable metrics
-2. **Advanced AI Implementation**: Moving beyond simple chatbots to structured data reasoning with LLMs
-3. **Domain Expertise**: Deep understanding of supply chain concepts including lead times, spend concentration, supplier criticality, and risk cascades
-4. **Data-to-Decision Pipeline**: Full workflow from raw data ingestion to executive-ready strategic recommendations
-5. **Technical Versatility**: Integration of modern web frameworks, AI APIs, and data visualization libraries
+### Installation
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/resilio-supply-chain-risk-analyzer.git
+cd resilio-supply-chain-risk-analyzer
+
+# Install dependencies
+npm install
+
+# Configure environment variables
+cp .env.example .env
+# Add your Google Gemini API key to .env
+
+# Run development server
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) to view the application.
+
+## 📊 Why This Project Matters
+
+This portfolio demonstrates key competencies for Data/Business Analyst roles:
+
+**Analytical Problem-Solving** - Decomposing complex global risks into quantifiable, actionable metrics
+
+**Advanced AI Implementation** - Structured data reasoning with LLMs beyond simple chatbots
+
+**Domain Expertise** - Deep understanding of supply chain concepts including lead times, spend concentration, supplier criticality, and risk cascades
+
+**Data-to-Decision Pipeline** - Complete workflow from raw data ingestion to executive-ready strategic recommendations
+
+**Technical Versatility** - Integration of modern web frameworks, AI APIs, and data visualization libraries
 
 ## 🔮 Future Enhancements
 
-- [ ] Integration with real-time news APIs for geopolitical event detection
+- [ ] Real-time news API integration for geopolitical event detection
 - [ ] Machine learning models for lead time forecasting
 - [ ] Multi-tier supplier network mapping (suppliers of suppliers)
 - [ ] Automated alert system for emerging risks
-- [ ] Export functionality for executive dashboards (PDF/PowerPoint)
+- [ ] Executive dashboard exports (PDF/PowerPoint)
 
 ## 📝 License
 
 This project is open source and available under the [MIT License](LICENSE).
 
-
-<div align="center">
-
-
-</div>
