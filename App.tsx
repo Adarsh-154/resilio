@@ -66,8 +66,11 @@ const App: React.FC = () => {
               R
             </div>
             <div>
-              <h1 className="text-xl font-bold text-slate-900">Resilio</h1>
-              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">AI Supply Chain Architect</p>
+              <div className="flex items-center gap-2">
+                <h1 className="text-xl font-bold text-slate-900">Resilio</h1>
+                <span className="bg-blue-50 text-blue-600 text-[10px] font-bold px-1.5 py-0.5 rounded border border-blue-100">PRO</span>
+              </div>
+              <p className="text-xs font-semibold text-slate-400 uppercase tracking-widest">Enterprise Risk Intelligence</p>
             </div>
           </div>
           <div className="flex items-center gap-6">
@@ -83,23 +86,23 @@ const App: React.FC = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
                 </svg>
               )}
-              Run AI Diagnostics
+              Run Intelligence Engine
             </button>
           </div>
         </div>
       </header>
 
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-8">
-        <div className="flex border-b border-slate-200 mb-8 gap-8">
+        <div className="flex border-b border-slate-200 mb-8 gap-8 overflow-x-auto">
           {[
-            { id: 'inventory', label: '1. Configure Inventory', icon: 'M4 6h16M4 10h16M4 14h16M4 18h16' },
+            { id: 'inventory', label: '1. Inventory Matrix', icon: 'M4 6h16M4 10h16M4 14h16M4 18h16' },
             { id: 'risk', label: '2. Risk Assessment', icon: 'M13 7h8m0 0v8m0-8l-8 8-4-4-6 6' },
-            { id: 'scenarios', label: '3. Scenario Optimization', icon: 'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m0 0l-2-1m2 1v2.5M14 19l-2 1m0 0l-2-1m2 1v2.5M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4z' }
+            { id: 'scenarios', label: '3. Strategic Scenarios', icon: 'M14 10l-2 1m0 0l-2-1m2 1v2.5M20 7l-2 1m0 0l-2-1m2 1v2.5M14 19l-2 1m0 0l-2-1m2 1v2.5M11.933 12.8a1 1 0 000-1.6L6.6 7.2A1 1 0 005 8v8a1 1 0 001.6.8l5.333-4z' }
           ].map(tab => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id as any)}
-              className={`pb-4 px-2 font-bold text-sm flex items-center gap-2 transition-all relative ${
+              className={`pb-4 px-2 font-bold text-sm whitespace-nowrap flex items-center gap-2 transition-all relative ${
                 activeTab === tab.id ? 'text-blue-600' : 'text-slate-400 hover:text-slate-600'
               }`}
             >
@@ -151,7 +154,7 @@ const App: React.FC = () => {
                        <svg className="w-5 h-5 text-blue-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                        </svg>
-                       Strategic Insights
+                       Core Intelligence
                     </h3>
                     <div className="grid grid-cols-1 gap-4">
                       {state.analysis.keyInsights.map((insight, i) => (
@@ -169,7 +172,7 @@ const App: React.FC = () => {
                        <svg className="w-5 h-5 text-red-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
                        </svg>
-                       High Priority Risks
+                       Risk Mitigations
                     </h3>
                     <div className="space-y-4">
                       {state.analysis.vulnerabilities.map((v, i) => (
@@ -177,7 +180,7 @@ const App: React.FC = () => {
                           <h4 className="font-bold text-slate-900">{v.title}</h4>
                           <p className="text-sm text-slate-500 mt-2 leading-relaxed">{v.description}</p>
                           <div className="mt-3 flex items-center gap-2">
-                             <span className="text-[10px] font-extrabold uppercase tracking-tighter text-red-600 bg-red-50 px-2 py-0.5 rounded">Impact: {v.impact}</span>
+                             <span className="text-[10px] font-extrabold uppercase tracking-tighter text-red-600 bg-red-50 px-2 py-0.5 rounded">Priority: {v.impact}</span>
                           </div>
                         </div>
                       ))}
@@ -192,7 +195,7 @@ const App: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                   </svg>
                 </div>
-                <p className="text-slate-400 font-medium">Please add suppliers and click "Run AI Diagnostics" above.</p>
+                <p className="text-slate-400 font-medium">Network matrix pending. Load inventory and run diagnostics.</p>
               </div>
             )}
           </div>
@@ -210,14 +213,24 @@ const App: React.FC = () => {
       </main>
 
       <footer className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-16 pt-8 border-t border-slate-200 text-center">
-        <div className="bg-slate-50 rounded-xl p-8 max-w-2xl mx-auto border border-slate-200">
-          <h4 className="text-sm font-bold text-slate-400 uppercase tracking-widest mb-4">Project Architecture for Interviewers</h4>
-          <p className="text-sm text-slate-600 leading-relaxed text-left">
-            <strong>The Problem:</strong> Global supply chains are increasingly volatile. Manually identifying single points of failure is error-prone. <br/><br/>
-            <strong>The Solution:</strong> Resilio leverages <strong>Gemini 3 Flash</strong> to perform logical reasoning across structured supplier data. It evaluates geographic density, category criticality, and financial exposure to generate a real-time risk index. <br/><br/>
-            <strong>Analytical Logic:</strong> Unlike simple dashboards, this app uses prompt-engineered reasoning to simulate non-linear global shocks, providing actionable mitigation steps (Diversification, Buffer Stocking, Nearshoring) tailored to the specific supplier mix.
-          </p>
+        <div className="bg-slate-50 rounded-xl p-8 max-w-2xl mx-auto border border-slate-200 text-left">
+          <h4 className="text-xs font-bold text-slate-400 uppercase tracking-widest mb-4">Analytical Framework & Methodology</h4>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div>
+              <h5 className="text-sm font-bold text-slate-900 mb-2">Core Logic</h5>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                Resilio utilizes multi-agent reasoning to evaluate supply chain health. By processing lead times, spend concentration, and geographic risk indices, it calculates a weighted Aggregate Risk Score (ARS).
+              </p>
+            </div>
+            <div>
+              <h5 className="text-sm font-bold text-slate-900 mb-2">Scenario Modeling</h5>
+              <p className="text-sm text-slate-600 leading-relaxed">
+                The platform stress-tests networks against non-linear market shocks. Simulations are powered by high-concurrency LLM reasoning to map impact dependencies across tier-1 and tier-2 nodes.
+              </p>
+            </div>
+          </div>
         </div>
+        <p className="mt-8 text-xs text-slate-400 font-medium">© 2024 Resilio Intelligence Systems. Version 1.2.4-stable</p>
       </footer>
     </div>
   );
